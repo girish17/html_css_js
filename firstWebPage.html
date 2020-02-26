@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<script type="text/javascript">
+			function displayContents(contents) {
+				//alert("Hi! "+contents.name.value+". Your age is "+contents.age.value+" and your email is "+contents.email.value);
+				//alert("You've searched for "+contents.searchKeyword.value);
+				if(contents.searchKeyword.value.toLowerCase() == "brownie") {
+					contents.brownieImg.hidden = false;
+				}
+				else {
+				      contents.brownieImg.hidden = true;
+				      alert("We couldn't find "+contents.searchKeyword.value);
+				}
+			}	
+		</script>
+		<style>
+			input {
+				padding: 10px;
+				margin: 10px;
+				font-family: Arial;
+			}
+
+			img {
+				padding: 10px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body> 
+		<p>Hello World!</p>
+		<img src="/home/gm/Pictures/abstract.png" height="100px" width="200px"></img>
+	 	<form action="#" onsubmit="displayContents(this)">
+			<input id="name" name="name" type="text" placeholder="Please enter your name"></input>
+			<br />
+			<input id="age" name="age" type="number" min="1" max="120" placeholder="Your age"></input>
+			<br />
+			<input id="email" name="email" type="email" placeholder="Valid email"></input>
+			<br />
+			<input id="searchKeyword" name="searchKeyword" type="search" placeholder="Enter a search keyword"></input>
+			<br />
+			<input id="submit" type="submit" value="submit"></input>
+			<img id="brownieImg" src="/home/gm/Pictures/brownie.jpeg" hidden="true"></img>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script type="text/javascript">
+			function callAlert(contents) {
+				alert("Hi! "+contents.name.value+". Your mail id is: "+contents.email.value+" and your age is: "+contents.age						.value);
+			}
+		</script>
+		<style>
+			input {
+				padding: 10px;
+				margin: 10px;
+				font-family: Arial;
+				font-size: 10px;
+				background-color: white;
+				border: 10px groove purple;
+			}
+			#submit {
+				background-color: yellow;
+			}
+			img {
+				border-style: solid;
+				border-width: 5px;
+				border-color: black;
+			}
+			form {
+				border: 5px dashed darkkhaki
+			}
+		</style>
+	</head>
+	<body>
+		<p>Hello World</p>
+		<br />
+		<img src="/home/gm/Pictures/abstract.png" height="300px" width="200px"></img>
+		<br />
+		<form action="#" id="details" onsubmit="callAlert(this)">
+			<input id="name" name="name" type="text" size="50" placeholder="Name" required="required"></input>
+			<br/>
+			<input id="age" name="age" type="number" min="15" placeholder="Age" required="required"></input>
+			<br/>
+			<input id="email" name="email" type="email" placeholder="Please enter your mail id" required="required"></input>
+			<br/>
+			<iframe src="https://www.wikipedia.org" width="400px" height="200px"> </iframe>
+			<input id="submit" type="submit" value="Submit"></input>
+		</form>
+	</body>
+</html>
